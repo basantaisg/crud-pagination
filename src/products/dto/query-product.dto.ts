@@ -28,4 +28,8 @@ export class QueryProductDto {
   @IsOptional()
   @IsString()
   order?: 'asc' | 'desc';
+
+  @IsOptional()
+  @IsString()
+  category?: string;
 }
