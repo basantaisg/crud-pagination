@@ -56,8 +56,11 @@ export class ProductsService {
     return this.prisma.product.findUnique({ where: { id } });
   }
 
-  async update(id: number, updateDto: UpdateProductDto) {
-    return this.prisma.product.update({ where: { id }, data: updateDto });
+  async update(id: number, updateProductDto: UpdateProductDto) {
+    return this.prisma.product.update({
+      where: { id },
+      data: updateProductDto,
+    });
   }
 
   async remove(id: number) {
